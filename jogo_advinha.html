@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br><hr><br>")
+    }
+    function mostra(frase) {
+        document.write("<big>" + frase + "</big>");
+        pulaLinha();
+    }
+
+    function calculaImc(peso, altura) {
+        return peso / (altura * altura);
+    }
+
+    var numero = Math.round(Math.random() * 100);
+
+    var beat = parseInt(prompt("Digite um número entre 0 a 100"));
+
+    if (beat == numero) {
+        mostra("Acertou!  Você digitou: " + numero)
+    } else {
+        mostra("Errou! Você digitou: " + beat + " e o número era: " + numero)
+    }
+
+</script>
