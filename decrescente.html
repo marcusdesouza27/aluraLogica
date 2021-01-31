@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var max = 20;
+    var min = 0;
+    mostra("Vamos ver os números em ordem decrescente?")
+    while (max >= min) {
+        mostra("O número é: "+ max)
+        max = max - 1;
+    }
+
+    mostra("FIM");
+
+</script>
