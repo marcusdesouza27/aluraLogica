@@ -1,14 +1,40 @@
 <meta charset="UTF-8">
+
 <script>
-    var tabuada = 99;
-    document.write(tabuada + " vezes 1 é " + tabuada * 1 + "<br>");
-    document.write(tabuada + " vezes 2 é " + tabuada * 2 + "<br>");
-    document.write(tabuada + " vezes 3 é " + tabuada * 3 + "<br>");
-    document.write(tabuada + " vezes 4 é " + tabuada * 4 + "<br>");
-    document.write(tabuada + " vezes 5 é " + tabuada * 5 + "<br>");
-    document.write(tabuada + " vezes 6 é " + tabuada * 6 + "<br>");
-    document.write(tabuada + " vezes 7 é " + tabuada * 7 + "<br>");
-    document.write(tabuada + " vezes 8 é " + tabuada * 8 + "<br>");
-    document.write(tabuada + " vezes 9 é " + tabuada * 9 + "<br>");
-    document.write(tabuada + " vezes 10 é " + tabuada * 10 + "<br>");
+
+    function pulaLinha() {
+
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+var contador = 1;
+mostra("<big>" + 'Vamos brincar de tabuada com While e For'+ "</big>")
+pulaLinha();
+
+var multiplicador = 1;
+var nro = parseInt(prompt('Digite um número: '));
+mostra('Ok! Vamos fazer a tabuada de ' + nro )
+pulaLinha()
+
+while(multiplicador <= 10) {
+
+    mostra('Multiplicando com While >> '+ nro + ' vezes ' +multiplicador +' = ' + nro * multiplicador);
+    multiplicador = multiplicador + 1
+}
+
+pulaLinha();
+mostra('Fim da tabuada de ' + nro + ' com o While')
+pulaLinha();
+
+for (var mult=1; mult <=10; mult++) {
+    mostra('Multimplicando com For >> ' + nro +' vezes ' +mult +' = ' + nro * mult)
+}
+pulaLinha();
+mostra('Fim da tabuada de ' + nro + ' com o For')
+
 </script>
