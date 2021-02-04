@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Ver número certo</button>
+<script>
+
+    var input = document.querySelector("input");
+    var secrets = [5, 9, 2, 6];
+    input.focus();
+
+    function verifica() {
+        var right = false;
+
+        for (var posicao = 0; posicao < secrets.length; posicao++) {
+            if (input.value == secrets[posicao]) {
+                alert("Parabéns! Você acertou!");
+                right = true;
+                break;
+            }
+        }
+
+        if (right == false) {
+            alert("Desculpe, número incorreto :( ");
+        }
+        input.value = '';
+        input.focus();
+    }
+
+
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+
+</script>

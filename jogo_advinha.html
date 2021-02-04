@@ -12,14 +12,19 @@
         return peso / (altura * altura);
     }
 
-    var numero = Math.round(Math.random() * 100;
+    var numero = Math.round(Math.random() * 100);
+    var tentativas = 1;
+    while(tentativas <= 3) {
+        var beat = parseInt(prompt("Digite um número entre 0 a 100"));
 
-    var beat = parseInt(prompt("Digite um número entre 0 a 100"));
-
-    if (beat == numero) {
-        mostra("Acertou!  Você digitou: " + numero)
-    } else {
-        mostra("Errou! Você digitou: " + beat + " e o número era: " + numero)
+        if (beat == numero) {
+            mostra("Acertou! Tentativa " + tentativas + " Você digitou: " + numero)
+            break;
+        } else {
+            alert("Tentativa " + tentativas + " Errou! Você digitou: " + beat + " e o número era: " + numero)
+        }
+         tentativas++;
     }
+
 
 </script>
