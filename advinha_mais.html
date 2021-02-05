@@ -4,8 +4,36 @@
 <button>Ver número certo</button>
 <script>
 
+    function sorteia() {
+        return Math.round(Math.random() * 10);
+    }
+
+    function sortNumber(qtde) {
+        var secrets = [];
+        var cont = 1;
+
+        while (cont <= qtde) {
+
+            var aleatorio = sorteia();
+            var existe = false;
+            if (aleatorio != 0) {
+                for (pos = 0; pos < secrets.length; pos++) {
+                    if (secrets[pos] == aleatorio) {
+                        existe = true;
+                        break;
+                    }
+                }
+
+                if (existe == false) {
+                    secrets.push(aleatorio);
+                    cont++;
+                }
+            }
+        }
+        return secrets;
+    }
+    var secrets = sortNumber(5);
     var input = document.querySelector("input");
-    var secrets = [5, 9, 2, 6];
     input.focus();
 
     function verifica() {
